@@ -1,0 +1,17 @@
+[Unit]
+Description=802.11DPMB Dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=@VENV_BIN@/dpmb --config /etc/dpmb/config.toml dashboard
+Restart=on-failure
+RestartSec=5
+Environment=PATH=@VENV_BIN@:/usr/bin:/bin
+Environment=DPMB_DB_PATH=/var/lib/dpmb/events.db
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

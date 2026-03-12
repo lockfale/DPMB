@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dpmb"
+version = "0.3.0"
+description = "802.11DPMB (Don't Probe Me Bro) — targeted 802.11 monitoring with LE detection"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "GPL-3.0-or-later"}
+
+dependencies = [
+    "scapy>=2.5.0",
+    "PyRIC>=0.1.6",
+    "click>=8.1.0",
+    "requests>=2.31.0",
+    "flask>=3.0.0",
+]
+
+[project.optional-dependencies]
+systemd = ["python-systemd>=235"]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-mock>=3.12.0",
+]
+
+[project.scripts]
+dpmb = "ssid_monitor.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]

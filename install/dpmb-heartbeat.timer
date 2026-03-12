@@ -1,0 +1,9 @@
+[Unit]
+Description=802.11DPMB Daily Heartbeat Timer
+
+[Timer]
+OnCalendar=*-*-* 08:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

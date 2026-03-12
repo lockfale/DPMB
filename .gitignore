@@ -1,0 +1,33 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+.DS_Store
+*.log
+.env
+
+# Crypto keys & certs
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Credentials
+credentials.json
+terraform.tfstate*
+
+# Databases
+*.db
+*.sqlite*
+
+# IDE / OS artifacts
+.idea/
+.vscode/
+Thumbs.db

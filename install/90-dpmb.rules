@@ -1,0 +1,2 @@
+# Restart DPMB scanner when a USB network adapter is connected
+ACTION=="add", SUBSYSTEM=="net", ATTR{type}=="1", RUN+="/bin/systemctl restart dpmb-scanner.service"

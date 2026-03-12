@@ -1,0 +1,8 @@
+[Unit]
+Description=802.11DPMB Daily Heartbeat
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=@VENV_BIN@/dpmb --config /etc/dpmb/config.toml heartbeat
+Environment=PATH=@VENV_BIN@:/usr/bin:/bin

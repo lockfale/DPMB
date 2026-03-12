@@ -1,0 +1,17 @@
+[Unit]
+Description=802.11DPMB Scanner
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=@VENV_BIN@/dpmb --config /etc/dpmb/config.toml start
+Restart=on-failure
+RestartSec=5
+User=root
+Environment=PATH=@VENV_BIN@:/usr/bin:/bin
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
