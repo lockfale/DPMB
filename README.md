@@ -46,7 +46,7 @@ DPMB auto-detects your wireless interface on startup. If multiple adapters are p
 ## Quick Start
 
 ```bash
-git clone https://github.com/smrk3r/DPMB.git
+git clone https://github.com/lockfale/DPMB.git
 cd DPMB
 sudo bash setup.sh
 ```
