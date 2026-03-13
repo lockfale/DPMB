@@ -1,6 +1,6 @@
 # 802.11DPMB
 
-**Don't Probe Me Bro** -- targeted 802.11 monitoring with law enforcement device detection
+**Don't Probe Me Bro** -- targeted 802.11 probe monitoring 
 
 ---
 
